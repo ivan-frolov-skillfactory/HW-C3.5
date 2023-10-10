@@ -1,24 +1,23 @@
 'use strict';
 
-function receivingObject (obj) {    //Создаю функцию, принимающую объект
+function receivingObject (obj) {   
     for (let prop in obj) {
-        if (obj.hasOwnProperty(prop)) {    //Вывожу собственные свойства объекта
+        if (obj.hasOwnProperty(prop)) {    
             console.log(prop, obj[prop]);
         }
     }
 }
 
-const phone = {    //Создаю объект (нитки для вязания)
+const phone = {    
     name: "Iphone",
     brand: 'Apple',
     model: '15 Pro Max',
 }   
 
-const pad = {    //Создаю объект (спицы для вязания)
-    name: "Pad",
+const pad = {    
     brand: "Samsung",
     model: 'S8 Ultra',
 }
 
-receivingObject(phone);    //Выводим собственные свойства объекта - нитки
-receivingObject(pad);    //Выводим собственные свойства объекта - спицы
+receivingObject(phone);    
+receivingObject(pad);   

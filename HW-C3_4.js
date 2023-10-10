@@ -1,18 +1,18 @@
 'use strict';
 
-function powerConsumingDevices(title, current) {    //Создаем функцию энергопотребляющих устройств (и задаем им параметры - наименование и количество тока берущего данным устройством)
-    this.title = title;    //переназначаем
+function powerConsumingDevices(title, current) {   
+    this.title = title;   
     this.current = current;
     this.isPlugged = false;
 }
 
-//Метод - определяющий подключено ли устройство к сети
+
 powerConsumingDevices.prototype.plugIn = function() {
     console.log(this.title + " is plugged!");
     this.isPlugged = true;
 }
 
-//Метод - определяющий отключено ли устройство от сети
+
 powerConsumingDevices.prototype.unplug = function() {
     console.log(this.title + " is unplugged!");
     this.isPlugged = false;
@@ -44,20 +44,11 @@ PAD.prototype = new powerConsumingDevices();
 const NewPhone = new Telephone('Apple', 'Iphone', '15 Pro Max', '50 Mp');
 const homePad = new PAD('Samsung', 'Pad', 'S8', 'UHD');
 
-// отключить TV от сети
-homePad.unplug();
-//console.log(NewPad);
 
-// подключить телефон к сети
+homePad.unplug();
+
 NewPhone.plugIn();
 
-//console.log(NewPhone);
-
-// включить TV к сети
 homePad.plugIn();
 
-//console.log(NewPad);
-
-// отключить телефон от сети
 NewPhone.unplug();
-//console.log(NewPhone);
